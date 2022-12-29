@@ -27,7 +27,6 @@ const Tab = ({ children, initialActive = 0, onActiveChange, active } : TabProps 
     const tabsData = children
     let actualBody = active ? tabsData[active].props.children : tabsData[initialActive].props.children
     
-
     const itensList = useRef<any>([])
     const divBody = useRef<any>(null)
 
@@ -69,13 +68,12 @@ const Tab = ({ children, initialActive = 0, onActiveChange, active } : TabProps 
             <ul className="tab__list">
                 {tabsData.map((item, index) => (
                     <li key={`item-${index}`} className="tab__list-item">
-                        <a                         
+                        <button                         
                         ref={addItem}
-                        className={`tab__list-link ${isActive(index) ? "active" : ""}`} 
-                        href="#"
+                        className={`tab__list-button ${isActive(index) ? "active" : ""}`} 
                         onClick={() => handleTabClick(index)}>
                             {item.props.title}
-                        </a>
+                        </button>
                     </li>
                 ))}
             </ul>

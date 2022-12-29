@@ -3,9 +3,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(8px + 1.5vmin);
-  border-bottom: 2px solid rgb(140, 140, 140);
-  color: rgb(140, 140, 140);
   margin: 0;
 }
 
@@ -28,16 +25,18 @@
   list-style: none;
 }
 
-.tab__list-link{
+.tab__list-button{
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 20px;
   color: rgb(84, 84, 84);
+  border: none;
+  background: none;
   border-bottom: 2px solid rgb(84, 84, 84);
 }
 
-.tab__list-link.active{
+.tab__list-button.active{
   border-bottom-color:rgb(30, 159, 110);
   color: rgb(30, 159, 110);
 }
